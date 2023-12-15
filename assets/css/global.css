@@ -1,0 +1,224 @@
+
+html { 
+    font-size: 62.5% !important;
+}
+
+body {
+    scroll-behavior: smooth !important;
+    box-sizing: border-box !important;
+    font-family: var(--ff-1) !important; 
+    font-size: var(--fs-1) !important;
+    font-weight: 400;
+    accent-color: var(--primary);
+    color: var(--black);
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10,
+.col-md-11, .col-md-12,
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10,
+.col-lg-11, .col-lg-12 {
+    padding: .25rem !important;
+}
+
+.container { 
+    max-width: 160rem !important; 
+    padding-inline: clamp(1rem, 4.5vw, 7.5rem) !important;
+}
+
+/*================================================
+SCROLL BAR
+==================================================*/
+
+::-webkit-scrollbar { 
+    width: .7rem; 
+}
+
+::-webkit-scrollbar-thumb { 
+    background: var(--primary); 
+}
+
+::-webkit-scrollbar-thumb:hover { 
+    background: var(--primary);
+}
+
+/*================================================
+PLACE HOLDER COLOR
+==================================================*/
+
+::placeholder { 
+    color: var(--gray) !important;
+    font-family: var(--ff-1) !important;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+}
+
+/*================================================
+WARNING MESSAGES
+==================================================*/
+
+.error { 
+    color: var(--red) !important; 
+    font-weight: 400;
+}
+
+.result { 
+    font-size: var(--fs-2);
+    color: var(--primary) !important;
+    font-weight: 500; 
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*===================================================================
+Hamburger Bar
+=====================================================================*/
+
+.hamburger {
+    padding: .25rem;
+    width: 4rem;
+    z-index: 999;
+    display: none;
+}
+
+.hamburger span {
+    background-color: var(--primary);
+    border-radius: .25rem;
+    display: block;
+    height: .4rem;
+    margin-block: .6rem;
+    transition: all .2s ease-in-out;
+}
+
+.hamburger__change span:nth-child(1) {
+    transform: translateY(10px) rotate(135deg);
+}
+
+.hamburger__change span:nth-child(2) {
+    transform: scale(0);
+}
+
+.hamburger__change span:nth-child(3) {
+    transform: translateY(-10px) rotate(-135deg);
+}
+
+@media (max-width: 991px) {
+    .hamburger {
+        display: unset;
+    }
+}
+
+/*===================================================================
+NAVBAR
+=====================================================================*/
+
+.nav__bar {
+    z-index: 999;
+    transition: 1s;
+    background: transparent;
+    padding-block: 1rem;
+    position: relative;
+}
+
+.nav__bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    display: block;
+    outline: none;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+    height: 4rem;
+    width: 4rem;
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    background: var(--primary);
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.nav__link { 
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    color: var(--primary);
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .5s;
+}
+
+.nav__link::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: var(--primary);
+    transform: scale(0, 1);
+    transition: .5s;
+    transform-origin: left top;
+}
+
+.nav__link:hover::after {
+    transform: scale(1);
+}
+
+.scroll { 
+    animation: fadeInDown 1s;
+    background: var(--white);
+    box-shadow: var(--sd-1);
+}
+
+@media (max-width: 991px) { 
+
+    .nav__block { 
+        text-align: center;
+        position: fixed;
+        inset: 0;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        opacity: 0;
+        background: rgba(255, 255, 255, .75) !important;
+        backdrop-filter: blur(1rem);
+        overflow: auto;
+        transition: .5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+
+    .nav__block--view {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+
+    .nav__link {
+        display: block;
+        font-size: var(--s-3);
+        color: var(--primary);
+        margin-block: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+}
+
+/*===================================================================
+FOOTER
+=====================================================================*/
+
+@media (max-width: 767px) {}
+
