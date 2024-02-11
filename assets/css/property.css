@@ -1,0 +1,94 @@
+
+/*================================================================================
+FONT FACE
+==================================================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap');
+
+/*======================================================
+VARIABLES
+========================================================*/
+
+:root {
+
+    --primary: #f57242;
+    --black: #000000;
+    --white: #FFFFFF;
+    --red: #bf0d1f;
+    --brown: #38180d;
+
+
+    --s-1: calc(1rem + 1vw);
+    --s-2: calc(1rem + 2vw);
+    --s-3: calc(1rem + 3vw);
+ 
+
+    --sd-1: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --sd-2: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+    --gd-1: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    --gd-2: linear-gradient(to right, var(--brown) 0%, var(--black) 100%);
+    --gd-3: linear-gradient(to left, var(--primary) 0%, var(--brown) 50%, var(--brown) 50%, var(--primary) 100%);
+
+
+    --ff-1: 'Roboto', sans-serif;
+    --ff-2: 'Amita', sans-serif;
+    --ff-bi: 'bootstrap-icons';
+
+
+    --fs-1: clamp(1.4rem, 2vw, 1.6rem);
+    --fs-2: clamp(1.6rem, 2vw, 1.8rem);
+    --fs-3: clamp(3rem, 5vw, 3.6rem);
+    --fs-4: clamp(2.2rem, 3vw, 2.6rem);
+    --fs-5: clamp(2rem, 3vw, 2.2rem);
+}
+
+/*======================================================
+FONT STYLE
+========================================================*/
+
+.p {
+    font-size: var(--fs-1) !important;
+    font-weight: 400 !important;
+}
+
+.p1 {
+    font-size: var(--fs-2) !important;
+    font-weight: 500 !important;
+    text-transform: capitalize;
+}
+
+.h {
+    font-size: var(--fs-3) !important;
+    font-weight: 700 !important;
+    text-transform: capitalize;
+    font-family: var(--ff-2);
+}
+
+.h1 {
+    font-size: var(--fs-4) !important;
+    font-weight: 700 !important;
+    text-transform: capitalize;
+    font-family: var(--ff-2);
+}
+
+.h2 {
+    font-size: var(--fs-5) !important;
+    font-weight: 600 !important;
+    text-transform: capitalize;
+    color: var(--primary) !important;
+}
+
+/*===================================================================================
+SECTIONS
+=====================================================================================*/
+
+.sec-1 {
+    padding-top: var(--s-2);
+}
+
+.sec-2 {
+    padding-block: var(--s-2);
+}
