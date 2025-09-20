@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <title>Redirecting…</title>
   <script>
-    const path = window.location.pathname;
-    window.location.replace(path);
+    var fullPath = '/cv/index.html' + location.search + location.hash;
+    window.location.replace(fullPath);
   </script>
 </head>
 <body>
-  <p>Redirecting...</p>
+  <h1>Redirecting…</h1>
+  <p>If you're not redirected, <a href="/cv/index.html">click here</a>.</p>
 </body>
 </html>
